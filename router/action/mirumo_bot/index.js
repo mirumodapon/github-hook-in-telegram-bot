@@ -15,7 +15,7 @@ module.exports = function (req) {
                     default: {
                         return response = {
                             method: "sendMessage",
-                            chat_id: char.id,
+                            chat_id: chat.id,
                             text: `The command(${text.slice(element.offset, element.length)}) is not found`
                         };
                     }
