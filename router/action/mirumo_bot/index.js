@@ -9,7 +9,6 @@ module.exports = function (req) {
                         return response = {
                             method: "sendMessgae",
                             chat_id: chat.id,
-                            parse_mode: "MarkdownV2",
                             text: `- Date: ${Date.parse(date)}\n- Text: ${text}\n- From: @${from.username}/ ${from.id}\nServer at https://stormy-everglades-39806.herokuapp.com/bot/:token`
                         };
                     }
