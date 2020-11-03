@@ -7,14 +7,14 @@ module.exports = function (req) {
                 switch (text.slice(element.offset, element.length)) {
                     case '/TEST': {
                         return response = {
-                            method: "sendMessgae",
+                            method: "sendMessage",
                             chat_id: chat.id,
                             text: `- Date: ${Date.parse(date)}\n- Text: ${text}\n- From: @${from.username}/ ${from.id}\nServer at https://stormy-everglades-39806.herokuapp.com/bot/:token`
                         };
                     }
                     default: {
                         return response = {
-                            method: "sendMessgae",
+                            method: "sendMessage",
                             chat_id: char.id,
                             text: `The command(${text.slice(element.offset, element.length)}) is not found`
                         };
