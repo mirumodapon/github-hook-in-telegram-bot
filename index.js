@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 
 // use api
-app.use('/bot', require('./router/api/mirumo_bot'));
+app.use('/bot', require('./router/api'));
 
 // create server
 const server = app.listen(
