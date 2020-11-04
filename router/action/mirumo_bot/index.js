@@ -9,7 +9,14 @@ module.exports = function (req) {
                         return response = {
                             method: "sendMessage",
                             chat_id: chat.id,
-                            text: `- Date: ${Date.parse(date)}\n- Text: ${text}\n- From: @${from.username}/ ${from.id}\nServer at https://stormy-everglades-39806.herokuapp.com/bot/:token`
+                            text: `- Date: ${(new Date(date)).toString()}\n- Text: ${text}\n- From: @${from.username}/ ${from.id}\nServer at https://stormy-everglades-39806.herokuapp.com/bot/:token`
+                        };
+                    }
+                    case '/help': {
+                        return response = {
+                            method: "sendMessgae",
+                            char_id: chat.id,
+                            text: require('./help')
                         };
                     }
                     default: {
