@@ -15,7 +15,7 @@ module.exports = function (req) {
                     case '/help': {
                         return response = {
                             method: "sendMessage",
-                            char_id: chat.id,
+                            chat_id: chat.id,
                             text: require('./help')
                         };
                     }
