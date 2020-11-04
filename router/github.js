@@ -4,7 +4,7 @@ const router = express.Router();
 router.post(
     '/:id',
     (req, res) => {
-        console.log(req.body);
+        res.status(204).send('No content');
         const { ref, repository, pusher, commits, compare } = req.body;
         const commits_count = commits.length;
         var msg = `<b><a href="${compare}">${commits_count} commit${(commits_count > 1) ? 's' : ''}</a> to <a href="${repository.html_url}">${repository.name}</a></b>\n`;
@@ -24,10 +24,10 @@ router.post(
                     text: msg
                 }
             );
-            return res.status(204).send('No content');
+            return;
         } catch (erro) {
             console.error(erro.message);
-            return res.status(404).send('Not found');
+            return;
         }
     }
 );
