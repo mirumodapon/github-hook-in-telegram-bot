@@ -4,6 +4,7 @@ const router = express.Router();
 router.post(
     '/:name',
     (req, res) => {
+        console.log(req.body);
         switch (req.body.type) {
             //-404228386
             case 'PushEvent': {
