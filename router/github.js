@@ -10,7 +10,7 @@ router.post(
         var msg = `<b><a href="${compare}">${commits_count} commit${(commits_count > 1) ? 's' : ''}</a> to <a href="${repository.html_url}">${repository.name}</a></b>\n`;
         commits.forEach(element => {
             msg += '<del>----------</del>\n';
-            msg += `<a href="${element.url}">${element.id.slice(0, 7)}</a>: ${element.message}\nBy ${element.committer.name}`
+            msg += `<a href="${element.url}">${element.id.slice(0, 7)}</a>: ${element.message}\nBy ${element.committer.name}\n`
         });
         msg += '<del>----------</del>\n';
         msg += `<u>${pusher.name}</u> pushed to ${ref}\n`;
