@@ -2,7 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const router = express.Router();
 router.post(
-    '/:name',
+    '/:id',
     (req, res) => {
         console.log(req.body);
         const { ref, repository, pusher, commits, compare } = req.body;
@@ -19,7 +19,7 @@ router.post(
             axios.post('https://api.telegram.org/bot1217070906:AAHYpyiV9zr9k2Jsxf7Ljt8MBa-cqr4n2Go/sendMessage',
                 {
                     method: "sendMessage",
-                    chat_id: 1157109940,
+                    chat_id: req.params.id,
                     parse_mode: "HTML",
                     text: msg
                 }
