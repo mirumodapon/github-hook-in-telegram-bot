@@ -11,5 +11,7 @@
 
 example:
 ```
-https://stormy-everglades-39806.herokuapp.com/github/@your_id
+https://stormy-everglades-39806.herokuapp.com/github/your_id
 ```
+
+ps: your id can get from TG bot when send "/TEST"
