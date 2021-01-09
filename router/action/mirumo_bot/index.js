@@ -12,13 +12,6 @@ module.exports = function (req) {
                             text: `- Date: ${(new Date(date * 1000)).toString()}\n- Text: ${text}\n- From: @${from.username}/ ${from.id}\nChat: ${chat.id}\nServer at https://stormy-everglades-39806.herokuapp.com/bot/:token`
                         };
                     }
-                    case '/help': {
-                        return response = {
-                            method: "sendMessage",
-                            chat_id: chat.id,
-                            text: require('./help')
-                        };
-                    }
                     default: {
                         return response = {
                             method: "sendMessage",
